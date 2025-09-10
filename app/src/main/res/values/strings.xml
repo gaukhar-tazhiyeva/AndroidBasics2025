@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android Basics Course</string>
+    <string name="this_is_android_basics_course_app">This is Android Basics Course App!</string>
+    <string name="button">Knopkf</string>
+</resources>
