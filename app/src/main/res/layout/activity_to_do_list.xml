@@ -23,11 +23,12 @@
             android:id="@+id/btnBack"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="@null"
             android:contentDescription="Назад"
             android:src="@drawable/baseline_arrow_back_24"
             app:tint="@android:color/white"
             tools:ignore="TouchTargetSizeCheck" />
+
 
         <View
             android:layout_width="0dp"
@@ -38,7 +39,7 @@
             android:id="@+id/btnStar"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="@null"
             android:contentDescription="Избранное"
             android:src="@drawable/baseline_star_outline_24"
             app:tint="@android:color/white"
@@ -48,7 +49,7 @@
             android:id="@+id/btnMore"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="@null"
             android:contentDescription="Ещё"
             android:src="@drawable/baseline_more_vert_24"
             app:tint="@android:color/white"
@@ -73,9 +74,10 @@
             android:layout_height="wrap_content"
             android:text="Список"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="16dp" />
 
         <ImageView
+            android:id="@+id/arrowDown"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="6dp"
@@ -94,7 +96,7 @@
         android:textColor="@android:color/white"
         app:layout_constraintTop_toBottomOf="@id/listBar"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="18dp" />
 
     <LinearLayout
         android:id="@+id/descriptionRow"
@@ -104,12 +106,12 @@
         android:gravity="center_vertical"
         app:layout_constraintTop_toBottomOf="@id/taskTitle"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="6dp">
+        android:layout_marginTop="16dp">
 
         <ImageView
             android:id="@+id/icListLeft"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/baseline_short_text_24"
             app:tint="@android:color/darker_gray"
             android:contentDescription="иконка списка" />
@@ -119,7 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Задача 2 со списком подзадач"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:textColor="@android:color/darker_gray"
             android:layout_marginStart="8dp" />
     </LinearLayout>
@@ -158,7 +160,7 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_marginStart="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="@null"
             android:contentDescription="удалить дедлайн"
             android:src="@drawable/baseline_close_24"
             app:tint="#EBEBEB"
@@ -173,7 +175,7 @@
         app:layout_constraintTop_toBottomOf="@id/deadlineLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -276,6 +278,7 @@
                 android:checked="false" />
 
             <EditText
+                android:id="@+id/editTextContent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -290,7 +293,7 @@
             <ImageButton
                 android:layout_width="18dp"
                 android:layout_height="18dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
+                android:background="@null"
                 android:contentDescription="удалить новое"
                 android:src="@drawable/baseline_close_24"
                 app:tint="@android:color/darker_gray"

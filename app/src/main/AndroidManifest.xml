@@ -13,37 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasicsCourse"
         tools:targetApi="31">
-        <activity
-            android:name=".HomePage"
-            android:exported="true"
 
-            />
-        <activity
-            android:name=".ToDoList"
-            android:exported="true">
+        <!-- Главный экран -->
+        <activity android:name=".NewsFeed" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".PracticeActivity"
-            android:exported="false" /> <!-- activity - активность(экран) -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
 
-            <!-- intent-filter - настривает как система будет находить и запускать мейнАктивити -->
-            <!--
-              action.MAIN - главная точка входа в приложение
-              category.LAUNCHER - делает активность видимой в списке приложений( в лаунчере),
-              отображает икноку на рабочем столе
-            -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
+        <!-- Второстепенные экраны -->
+        <activity android:name=".HomePage" android:exported="true" />
+        <activity android:name=".ToDoList" android:exported="true" />
+        <activity android:name=".PracticeActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="true" />
     </application>
 
 </manifest>
